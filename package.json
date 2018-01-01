@@ -1,5 +1,5 @@
 {
-  "name": "react-context-menu",
+  "name": "react-jsx-context-menu",
   "version": "1.0.0",
   "description": "A context menu implementation for React",
   "main": "dist/react-context-menu.min.js",
