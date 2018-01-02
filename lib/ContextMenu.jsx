@@ -24,7 +24,11 @@ class ContextMenu extends Component {
     }
 
     onClickOff(event) {
-        if (this.menuRef && !(event.target === this.menuRef || this.menuRef.contains(event.target))) {
+        if (
+            this.menuRef &&
+            event.target !== this.menuRef &&
+            !this.menuRef.contains(event.target)
+        ) {
             this.setState({
                 open: false,
             });
@@ -51,19 +55,23 @@ class ContextMenu extends Component {
                     },
                 })}
                 {this.state.open &&
-                    React.cloneElement(this.props.menu, {
-                        ref: (menu) => {
+                    <div
+                        ref={(menu) => {
                             if (menu) {
                                 this.menuRef = menu;
                             }
-                        },
-                        style: {
+                        }}
+                        style={{
                             ...this.props.menu.props.style,
                             position: 'absolute',
                             left: this.state.location.x,
                             top: this.state.location.y,
-                        },
-                    })
+                            margin: 0,
+                            padding: 0,
+                        }}
+                    >
+                        {this.props.menu}
+                    </div>
                 }
             </div>
         );
