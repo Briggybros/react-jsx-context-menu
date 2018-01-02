@@ -2,10 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    entry: path.join(__dirname, 'lib', 'index.js'),
+    entry: path.join(__dirname, 'lib', 'ContextMenu.jsx'),
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'react-context-menu.min.js',
+        libraryTarget: 'umd',
     },
     module: {
         loaders: [{
@@ -37,6 +38,7 @@ module.exports = {
     plugins: [
         new webpack.optimize.UglifyJsPlugin({
             compress: true,
+            comments: false,
         }),
     ],
 };

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class ContextMenu extends React.Component {
+class ContextMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -32,7 +32,7 @@ class ContextMenu extends React.Component {
     }
 
     onRightClick(x, y) {
-        this.setState(prevState => ({
+        this.setState(() => ({
             location: {
                 x,
                 y,
