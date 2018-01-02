@@ -2,6 +2,16 @@
   "name": "react-jsx-context-menu",
   "version": "1.0.6",
   "description": "A context menu implementation for React",
+  "keywords": [
+    "react",
+    "jsx",
+    "context",
+    "menu",
+    "contextmenu",
+    "right",
+    "click",
+    "rightclick"
+  ],
   "main": "dist/react-context-menu.min.js",
   "repository": "git@github.com:Briggybros/react-context-menu.git",
   "author": "Gregory Sims <briggybros.2@googlemail.com>",
