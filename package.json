@@ -1,12 +1,15 @@
 {
   "name": "react-jsx-context-menu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A context menu implementation for React",
   "main": "dist/react-context-menu.min.js",
   "repository": "git@github.com:Briggybros/react-context-menu.git",
   "author": "Gregory Sims <briggybros.2@googlemail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "prepublish": "webpack -p"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
