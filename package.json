@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "prepublish": "webpack -p"
+    "prepublish": "webpack"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

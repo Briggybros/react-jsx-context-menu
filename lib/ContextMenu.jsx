@@ -33,6 +33,7 @@ class ContextMenu extends Component {
 
     onRightClick(x, y) {
         this.setState(() => ({
+            open: true,
             location: {
                 x,
                 y,
@@ -51,6 +52,11 @@ class ContextMenu extends Component {
                 })}
                 {this.state.open &&
                     React.cloneElement(this.props.menu, {
+                        ref: (menu) => {
+                            if (menu) {
+                                this.menuRef = menu;
+                            }
+                        },
                         style: {
                             ...this.props.menu.props.style,
                             position: 'absolute',
