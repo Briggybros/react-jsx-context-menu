@@ -1,6 +1,6 @@
 {
   "name": "react-jsx-context-menu",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A context menu implementation for React",
   "main": "dist/react-context-menu.min.js",
   "repository": "git@github.com:Briggybros/react-context-menu.git",
